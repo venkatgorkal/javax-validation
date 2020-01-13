@@ -5,15 +5,15 @@ import java.util.List;
 public class ExceptionResponse {
   private Date timestamp;
   private String message;
-  private String details;
+  //private String details;
   private String errorCode;
   List<String> messages;
 
-  public ExceptionResponse(Date timestamp, String message, String details,String errorCode,List<String> messages) {
+  public ExceptionResponse(Date timestamp, String message, String errorCode,List<String> messages) {
     super();
     this.timestamp = timestamp;
     this.message = message;
-    this.details = details;
+    //this.details = details;
     this.messages = messages;
     this.errorCode = errorCode;
   }
@@ -42,8 +42,6 @@ public String getMessage() {
     return message;
   }
 
-  public String getDetails() {
-    return details;
-  }
+
 
 }

@@ -19,7 +19,13 @@ public class ClaimTypeInListValidator  implements ConstraintValidator<ClaimTypeI
         //return contactField != null && contactField.matches("[0-9]+") && (contactField.length() > 8) && (contactField.length() < 14);
     
     	List<String> claimTypeList = Arrays.asList("ELECTRONIC","PAPER","REKEY");
-    	return (value != null &&  claimTypeList.contains(value));
+    	
+    	if(value == null || value.isEmpty()) {
+    		return true;
+    	} else {
+    		 return claimTypeList.contains(value);
+    	}
+    	//return (value != null && value.isEmpty() &&  claimTypeList.contains(value));
            
     }
 

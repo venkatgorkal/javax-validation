@@ -17,9 +17,14 @@ public class TransactionTypeInListValidator  implements ConstraintValidator<Tran
 
     public boolean isValid(String value, ConstraintValidatorContext cxt) {
         //return contactField != null && contactField.matches("[0-9]+") && (contactField.length() > 8) && (contactField.length() < 14);
-    
-    	List<String> transactionTypeList = Arrays.asList("837I","837P");
-    	return (value != null &&  !transactionTypeList.contains(value));
+ 
+    	
+    	List<String> transactionTypeList = Arrays.asList("837I","837P"); 
+    	if(value == null || value.isEmpty()) {
+    		return true;
+    	} else {
+    		 return transactionTypeList.contains(value);
+    	}
            
     }
 

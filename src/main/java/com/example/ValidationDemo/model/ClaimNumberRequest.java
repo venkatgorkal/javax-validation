@@ -15,7 +15,7 @@ import com.example.ValidationDemo.customValidator.ServiceCodeInListConstraint;
 import com.example.ValidationDemo.customValidator.TransactionTypeInListConstraint;
 import com.example.ValidationDemo.customValidator.ClaimTypeRequiredForOtherPlanType;
 
-@ClaimTypeRequiredForOtherPlanType.List({ @ClaimTypeRequiredForOtherPlanType(first = "claimType", second = "planType", message = "ClaimType Required if plan type is not NS") })
+@ClaimTypeRequiredForOtherPlanType.List({ @ClaimTypeRequiredForOtherPlanType(first = "claimType", second = "planType", message = "ClaimType Required if plan type other than NS or CE") })
 public class ClaimNumberRequest {
 
 	
